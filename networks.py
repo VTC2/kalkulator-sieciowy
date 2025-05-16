@@ -192,4 +192,5 @@ def NetworkInfo(IPv4Address: str|list|int, IPv4Netmask: str|list|int) -> dict:
 
 	return network
 
+
 print(NetworkInfo('192.168.15.10','255.255.255.0'))

@@ -7,9 +7,12 @@ class IPv4Netmask(addr.IPv4Address):
             super().__init__(netmask)
     
     # Walidacja maski podsieci
-	def __ValidateIPv4Netmask(self, IPv4Netmask):
-    
+    def __ValidateIPv4Netmask(self, IPv4Netmask):
+        pass
+
     # Obliczanie długości prefixu (liczba binarnych 1 w masce)
-	def GetPrefixLength(self) -> int:
-    
+    def GetPrefixLength(self) -> int:
+        pass
+
     def SetIPv4NetmaskFromPrefixLength(self, prefixLength: int) -> int:
+        pass

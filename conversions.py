@@ -1,4 +1,3 @@
-
 def DecToAny(value: int, destBase, digits) -> str:
 	#sprawdzenie, czy wartość wejściowa jest obiektem pustym
 	if value is None:
