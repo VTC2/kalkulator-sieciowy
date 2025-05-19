@@ -12,3 +12,4 @@ def __str__(self):
 
 # Funkcja zwraca informacje na temat adresacji IPv4 sieci, do której należy podany adres i maska podsieci
 	def GetNetworkInfo(self) -> dict:	
+		pass
