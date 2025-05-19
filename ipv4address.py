@@ -85,7 +85,7 @@ class IPv4Address():
             return None
         #sprawdzenie, czy podana wartość zawiera dozwolone cyfry w podanym systemie liczbowym
         #w przeciwnym wypadku zwraca None
-
+#jeżeli dima lub abdul tu byli to usuną ten napis
         for i in range(len(strVal)):
             if strVal[i].isdigit():
                 dec += int(strVal[i]) * srcBase ** (len(strVal) - i - 1)
