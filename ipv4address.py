@@ -11,7 +11,7 @@ class IPv4Address():
     #konstruktor
     def __init__(self, address):
     
-        if self.__ValidateIPv4Address(address):
+        if self.__ValidateIPv4Address():
             self.address = address
             print("git")
     #metoda
@@ -22,21 +22,10 @@ class IPv4Address():
         #list - walidujemy listę:
         #sprawdzamy, czy zawiera dokładnie 4 oktety
         #sprawdzamy czy każdy oktet zawiera wartości od 0 do 255
-
-        #jeżeli podano adres IPv4 w postaci kropkowo-dziesiętnej
+        pass
+        #sjeżeli podano adres IPv4 w postaci kropkowo-dziesiętnej
         octets = []
 
-    def ToList(self, IPv4AddressDotDec):
-        #"192.168.10.15" -> [192,168,10,15]
-        list = self.address.split('.')
-        list2 = []
-        for octet in list:
-            try:
-                list2.append(int(octet))
-            except ValueError as ve:
-                list2.append(0)
-                raise InvalidOctetValue("Oktet zawiera nieprawidłowe znaki: ", octet)
-        return list2
     def GetDotDec(self, lista):
         return str(lista[0]) + "." + str(lista[1]) + "." + str(lista[2]) + "." + str(lista[3])
 
@@ -70,8 +59,8 @@ class IPv4Address():
 
    
     #reprezentacja łańcuchowa  #nie wiem co to znaczy
-    def __str__(self):
-        pass
+    # def __str__(self):
+      #  pass
 
     #zwraca adres w postaci łańcucha, address/prefix-length, np.
     def AnyToDec(strVal, srcBase):
@@ -91,6 +80,11 @@ class IPv4Address():
         else:
             print("Podana wartość wejściowa zawiera cyfry nie występujące w tym systemie liczbowym.")
             return None
-IPv4Address("192.168.0.1")
+ip = IPv4Address("192.168.0.1")
+
+print(ip.GetBin())
+print(ip.ToList())
+
+
 
 print ('jsjsjs')
