@@ -27,7 +27,8 @@ class IPv4Address():
         octets = []
 
     def GetDotDec(self):
-        return str(self.address[0]) + "." + str(self.address[1]) + "." + str(self.address[2]) + "." + str(self.address[3])
+        temp = self.ToList()
+        return str(temp[0]) + "." + str(temp[1]) + "." + str(temp[2]) + "." + str(temp[3])
 
     #zamienia na 32-bitową liczbę dziesiętną 
     def _IPv4AddressToDec(self, IPv4Address):
@@ -54,9 +55,9 @@ class IPv4Address():
    
    
     #funkcja przekształca adres IPv4 w postaci dziesiętnej na listę oktetów      
-    def ToList(self, getDotDec):
+    def ToList(self):
         try:
-            parts = getDotDec.split('.')
+            parts =  self.address.split('.')
             if len(parts) != 4:
                 raise InvalidOctetsNumber("Adres musi zawierać dokładnie 4 oktety")
             
@@ -97,7 +98,7 @@ class IPv4Address():
 ip = IPv4Address("192.168.0.1")
 
 print(ip.GetDotDec())
-
+print(ip.ToList())
 
 
 
